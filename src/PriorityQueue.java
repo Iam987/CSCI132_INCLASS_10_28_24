@@ -16,5 +16,17 @@ public class PriorityQueue {
 		Collections.sort(data);
 	}
 	
+	public Patient dequeue() {
+		Patient removed = data.removeFirst();
+		size += -1;
+		return removed;
+	}
 	
+	public Patient peek() {
+		return data.getFirst();
+	}
+	
+	public boolean isEmpty() {
+		return size == 0;
+	}
 }
