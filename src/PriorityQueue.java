@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class PriorityQueue {
@@ -8,4 +9,12 @@ public class PriorityQueue {
 		data = new LinkedList<Patient>();
 		size = 0;
 	}
+	
+	public void enqueue(Patient newPatient) {
+		data.add(newPatient);
+		size += 1;
+		Collections.sort(data);
+	}
+	
+	
 }

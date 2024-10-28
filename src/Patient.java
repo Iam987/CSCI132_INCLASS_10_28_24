@@ -1,5 +1,5 @@
 
-public class Patient {
+public class Patient implements Comparable<Patient>{
 	private String name;
 	private int age;
 	
@@ -18,5 +18,15 @@ public class Patient {
 	}
 	public void setAge(int a) {
 		age = a;
+	}
+	@Override
+	public int compareTo(Patient o) {
+		if(age < o.age) {
+			return 1;
+		}
+		else if(age > o.age) {
+			return -1;
+		}
+		return 0;
 	}
 }
